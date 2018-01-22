@@ -69,7 +69,7 @@ include::../src/main/resources/main.js[]
 
 . Test the webapp - from the applications UI, you should now find a link to test the app.
 
-image::images/hello.png[Sunset]
+image::images/webapp.png[Sunset]
 
 
 When looking at the application from admin console again, you should see a new section called "Web app" in the details panel. This will contain a link ala localhost://app/my.first.app. Click the link to launch your app.
