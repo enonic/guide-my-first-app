@@ -5,7 +5,7 @@ plugins {
 
 app {
     name = project.appName
-    displayName = 'My First Webapp'
+    displayName = 'My First App'
     vendorName = 'Enonic'
     vendorUrl = 'http://enonic.com'
     systemVersion = "${xpVersion}"

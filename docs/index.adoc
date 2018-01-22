@@ -13,17 +13,13 @@ TODO
 
 Lets create a project structure for your application. To be efficient, we will use an script to initialize our project from a template:
 
-. Go to the https://market.enonic.com/vendors/enonic/vanilla-starter[Vanilla Starter kit] on Enonic Market
-. Click the image:images/clone.png[Clone, 100] button
-. Follow the instructions run the init-project command
+. *Open Vanilla Starter Kit* on https://market.enonic.com/vendors/enonic/vanilla-starter[Enonic Market]
+. *Click the image:images/clone.png[Clone, 100] button.*
+. *Follow the instructions* run the init-project command
 
 Once the script is completed, you will have generated a project folder, with a structure looking something like this:
 
 TODO
-
-
-
-
 
 
 [NOTE]
@@ -37,32 +33,44 @@ The following folders and files generated in the project will not be used in thi
 
 == Building and Deploying
 
-Now that we have an application project, its time to build and deploy the app to the development environment.
+Now that we have a project, its time to build and deploy the app to the development environment.
 
-Verify XP_HOME
-gradlew deploy
-TODO::
+. *Change directory* to your newly created project folder
+. *Run the build script*. The app file will be palaced in the build/libs/ folder
 
-Once the task is completed, we can verify that the application is installed and running by logging into the admin console of the development environment and launching the Applications tool.
+  ./gradlew build
 
-You should now see something like this:
-TODO
+. Deploy the app. This command will be placed
 
-== Add a controller
+  ./gradlew deploy
 
-Our first contribution to the app will be a simple "Hello App" controller. Create a new file called `src/main/resources/main.js` in your project.
+. Verify that the app is installed from the Applications tool.
 
+image::images/webapp.png[Sunset]
+
+
+== Adding a root controller
+
+Our small code contribution to this app will be a simple "Hello App" controller.
+By placing a Javascript file called main.js in the resources/ folder of our project,
+we are creating a root controller for our web application:
+
+. *Create a new file* called `src/main/resources/main.js` in your project.
+. *Add some code* to the main.js file and save:
++
 [source,javascript]
 ----
-include::main.js[]
+include::../src/main/resources/main.js[]
 ----
++
+. *Build and deploy* your application once more. NB! The deploy command will both build and deploy the app
 
-Build and deploy your application once more.
+  ./gradlew deploy
 
-[source, bash]
-----
-$ ./gradlew deploy
-----
+. Test the webapp - from the applications UI, you should now find a link to test the app.
+
+image::images/hello.png[Sunset]
+
 
 When looking at the application from admin console again, you should see a new section called "Web app" in the details panel. This will contain a link ala localhost://app/my.first.app. Click the link to launch your app.
 
