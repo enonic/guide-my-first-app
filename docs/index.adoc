@@ -11,24 +11,26 @@ TODO
 
 == Setting up your project
 
-Lets create a project structure for your application. To be efficient, we will use an script to initialize our project from a template:
+With the development set up, you are ready to create a project structure for the application. To be efficient, we will use an script to initialize our project from a template:
 
-. *Open Vanilla Starter Kit* on https://market.enonic.com/vendors/enonic/vanilla-starter[Enonic Market]
-. *Click the image:images/clone.png[Clone, 100] button.*
-. *Follow the instructions* run the init-project command
+. *Go to the Vanilla Starter Kit* on https://market.enonic.com/vendors/enonic/vanilla-starter[Enonic Market]
+. *Click the image:images/clone.png[Clone, 80] button.*
+. *Follow the instructions* run the init-project command. Use the name `my.first.app`
+. *Verify project files*. You should now have generated a project file structure that looks something like this:
 
-Once the script is completed, you will have generated a project folder, with a structure looking something like this:
-
-TODO
-
+[source,filesystem]
+----
+src/
+ main/
+  resources/ <1>
+   application.svg <2>
+   application.xml <3>
+gradle.properties <4>
+----
 
 [NOTE]
 ====
-The following folders and files generated in the project will not be used in this tutorial, and you may optionally remove them:
-
-  src/main/resources/site*
-  src/main/resources/admin*
-
+The other folders and files in the project structure are not relevant for completing this tutorial.
 ====
 
 == Building and Deploying
@@ -36,7 +38,7 @@ The following folders and files generated in the project will not be used in thi
 Now that we have a project, its time to build and deploy the app to the development environment.
 
 . *Change directory* to your newly created project folder
-. *Run the build script*. The app file will be palaced in the build/libs/ folder
+. *Run the build script*. The app file will be placed in the build/libs/ folder.
 
   ./gradlew build
 
@@ -44,16 +46,16 @@ Now that we have a project, its time to build and deploy the app to the developm
 
   ./gradlew deploy
 
-. Verify that the app is installed from the Applications tool.
+. Verify that the app is installed and started from the Applications tool.
 
-image::images/webapp.png[Sunset]
+image::images/app.png[My First app listed]
 
 
 == Adding a root controller
 
-Our small code contribution to this app will be a simple "Hello App" controller.
+Its time to contribute some code in the form of a simple "Hello App" controller.
 By placing a Javascript file called main.js in the resources/ folder of our project,
-we are creating a root controller for our web application:
+we instantly have a root controller for our web application:
 
 . *Create a new file* called `src/main/resources/main.js` in your project.
 . *Add some code* to the main.js file and save:
@@ -67,16 +69,10 @@ include::../src/main/resources/main.js[]
 
   ./gradlew deploy
 
-. Test the webapp - from the applications UI, you should now find a link to test the app.
+. *Test the webapp*. It should be available on http://localhost:8080/app/<name.of.your.app> You can also find the link from the admin Applications UI. If everything went well, it will look somethink like the screenshot below:
 
-image::images/webapp.png[Sunset]
+image::images/hello.png[Output from main.js controller]
 
-
-When looking at the application from admin console again, you should see a new section called "Web app" in the details panel. This will contain a link ala localhost://app/my.first.app. Click the link to launch your app.
-
-You should now see something like this:
-
-TODO
 
 == Suggested next steps
 
