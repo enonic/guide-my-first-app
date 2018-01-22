@@ -1,0 +1,82 @@
+:source-highlighter: pygments
+
+= My first app
+
+A step-by-step guide to building your first application on the Enonic platform
+
+== Installing the software development environment
+
+In order to complete this guide, you need to have the Enonic development environment installed on your computer.
+TODO
+
+== Setting up your project
+
+Lets create a project structure for your application. To be efficient, we will use an script to initialize our project from a template:
+
+. Go to the https://market.enonic.com/vendors/enonic/vanilla-starter[Vanilla Starter kit] on Enonic Market
+. Click the image:images/clone.png[Clone, 100] button
+. Follow the instructions run the init-project command
+
+Once the script is completed, you will have generated a project folder, with a structure looking something like this:
+
+TODO
+
+
+
+
+
+
+[NOTE]
+====
+The following folders and files generated in the project will not be used in this tutorial, and you may optionally remove them:
+
+  src/main/resources/site*
+  src/main/resources/admin*
+
+====
+
+== Building and Deploying
+
+Now that we have an application project, its time to build and deploy the app to the development environment.
+
+Verify XP_HOME
+gradlew deploy
+TODO::
+
+Once the task is completed, we can verify that the application is installed and running by logging into the admin console of the development environment and launching the Applications tool.
+
+You should now see something like this:
+image::sunset.jpg[Installed Application]
+
+
+== Add a controller
+
+Our first contribution to the app will be a simple "Hello App" controller. Create a new file called `src/main/resources/main.js` in your project.
+
+[source,javascript]
+----
+include::main.js[]
+----
+
+Build and deploy your application once more.
+
+[source, bash]
+----
+$ ./gradlew deploy
+----
+
+When looking at the application from admin console again, you should see a new section called "Web app" in the details panel. This will contain a link ala localhost://app/my.first.app. Click the link to launch your app.
+
+You should now see something like this:
+
+image::webapp.png[Web App details]
+
+
+== Suggested next steps
+
+The Enonic Team salutes you on building your first app, below are links to learn more about Enonic XP:
+
+Route handling
+My First site
+Controllers
+Templating
