@@ -46,8 +46,7 @@ TODO::
 Once the task is completed, we can verify that the application is installed and running by logging into the admin console of the development environment and launching the Applications tool.
 
 You should now see something like this:
-image::sunset.jpg[Installed Application]
-
+TODO
 
 == Add a controller
 
@@ -69,8 +68,7 @@ When looking at the application from admin console again, you should see a new s
 
 You should now see something like this:
 
-image::webapp.png[Web App details]
-
+TODO
 
 == Suggested next steps
 
