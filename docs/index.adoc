@@ -2,12 +2,16 @@
 
 = My first app
 
-A step-by-step guide to building your first application on the Enonic platform
+*A step-by-step tutorial for building your first web application on the Enonic platform*
 
-== Installing the software development environment
+****
+[CAUTION]
+====
+In order to complete this tutorial, the Enonic development environment must be installed on your computer.
+LINK TO INSTALL ENONIC DEV ENV COMING HERE
+====
+****
 
-In order to complete this guide, you need to have the Enonic development environment installed on your computer.
-TODO
 
 == Setting up your project
 
@@ -30,7 +34,7 @@ gradle.properties <4>
 
 [NOTE]
 ====
-The other folders and files in the project structure are not relevant for completing this tutorial.
+The other files and folders in the project structure are not relevant for this tutorial.
 ====
 
 == Building and Deploying
@@ -69,16 +73,25 @@ include::../src/main/resources/main.js[]
 
   ./gradlew deploy
 
-. *Test the webapp*. It should be available on http://localhost:8080/app/<name.of.your.app> You can also find the link from the admin Applications UI. If everything went well, it will look somethink like the screenshot below:
+. *Test the webapp*. It should be available on http://localhost:8080/app/my.first.app You can also find the link from the admin Applications UI. If everything went well, it will look somethink like the screenshot below:
 
 image::images/hello.png[Output from main.js controller]
 
 
-== Suggested next steps
+Awesome job, you have officially built your first Enonic App :)
+- The Enonic Team
 
-The Enonic Team salutes you on building your first app, below are links to learn more about Enonic XP:
 
-Route handling
-My First site
-Controllers
-Templating
+== Next steps
+
+If you are ready for some more action, move on to one of the following tutorials:
+
+* Routing
+* Thymeleaf templating
+* Mustache templating
+* XSLT templating
+* CRUD with the node API
+* Testing your controllers
+* Adding Java to your Applications
+* My First Library
+* My First site
