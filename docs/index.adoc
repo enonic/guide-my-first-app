@@ -52,7 +52,7 @@ Now that we have a project, its time to build and deploy the app to the developm
 
 . Verify that the app is installed and started from the Applications tool.
 
-image::images/app.png[My First app listed]
+image::images/app.png["My First app started", 100%]
 
 
 == Adding a root controller
@@ -75,7 +75,7 @@ include::../src/main/resources/main.js[]
 
 . *Test the webapp*. It should be available on http://localhost:8080/app/my.first.app You can also find the link from the admin Applications UI. If everything went well, it will look somethink like the screenshot below:
 
-image::images/hello.png[Output from main.js controller]
+image::images/hello.png["Output from main.js controller", 100%]
 
 
 Awesome job, you have officially built your first Enonic App :)
