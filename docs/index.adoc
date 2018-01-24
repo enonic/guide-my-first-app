@@ -8,7 +8,7 @@
 [CAUTION]
 ====
 In order to complete this tutorial, the Enonic development environment must be installed on your computer.
-LINK TO INSTALL ENONIC DEV ENV COMING HERE
+http://docs.enonic.com/en/stable/getstarted/index.html
 ====
 ****
 
