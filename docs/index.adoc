@@ -1,14 +1,14 @@
-:source-highlighter: pygments
-
 = My first app
 
 *A step-by-step tutorial for building your first web application on the Enonic platform*
 
+image::images/ready-set-code.svg["Ready...Set...Code!", width=100%]
+
 ****
 [CAUTION]
 ====
-In order to complete this tutorial, the Enonic development environment must be installed on your computer.
-http://docs.enonic.com/en/stable/getstarted/index.html
+In order to complete this tutorial, the Enonic development environment must be installed on your computer:
+https://developer.enonic.com/enonic-101/install-developer-environment
 ====
 ****
 
@@ -20,22 +20,27 @@ With the development set up, you are ready to create a project structure for the
 . *Go to the Vanilla Starter Kit* on https://market.enonic.com/vendors/enonic/vanilla-starter[Enonic Market]
 . *Click the image:images/clone.png[Clone, 80] button.*
 . *Follow the instructions* run the init-project command. Use the name `my.first.app`
-. *Verify project files*. You should now have generated a project file structure that looks something like this:
-
-[source,filesystem]
+. *Verify project files*. The command will now have generated a project file structure:
+[source,files]
 ----
+build.gradle <1>
+gradle.properties <2>
 src/
  main/
-  resources/ <1>
-   application.svg <2>
-   application.xml <3>
-gradle.properties <4>
+  resources/ <3>
+   assets/ <4>
+   application.svg <5>
+   application.xml <6>
 ----
 
-[NOTE]
-====
-The other files and folders in the project structure are not relevant for this tutorial.
-====
+<1> Contains metadata on the maker of the app and more
+<2> Specifies the name and version of the app and more
+<3> The main directory where code is placed
+<4> This is where we place css, images and javascript files to be served directly
+<5> Replace this icon to get a different icon for your app
+<6> Optionally change the description of your app here
+
+NOTE: The other files and folders in the project structure are not relevant for this tutorial.
 
 == Building and Deploying
 
@@ -52,7 +57,7 @@ Now that we have a project, its time to build and deploy the app to the developm
 
 . Verify that the app is installed and started from the Applications tool.
 
-image::images/app.png["My First app started", 100%]
+image::images/app.png["My First app started"]
 
 
 == Adding a root controller
@@ -75,23 +80,7 @@ include::../src/main/resources/main.js[]
 
 . *Test the webapp*. It should be available on http://localhost:8080/app/my.first.app You can also find the link from the admin Applications UI. If everything went well, it will look somethink like the screenshot below:
 
-image::images/hello.png["Output from main.js controller", 100%]
+image::images/hello.png["Output from main.js controller"]
 
-
-Awesome job, you have officially built your first Enonic App :)
-- The Enonic Team
-
-
-== Next steps
-
-If you are ready for some more action, move on to one of the following tutorials:
-
-* Routing
-* Thymeleaf templating
-* Mustache templating
-* XSLT templating
-* CRUD with the node API
-* Testing your controllers
-* Adding Java to your Applications
-* My First Library
-* My First site
+[quote, The Enonic Team]
+Congratulations on building your first Enonic App!
