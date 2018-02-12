@@ -1,4 +1,4 @@
-= My first app
+= My first Enonic Application
 
 *A step-by-step tutorial for building your first web application on the Enonic platform*
 
