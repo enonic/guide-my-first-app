@@ -1,6 +1,6 @@
-= My first Enonic Application
+= Your first Enonic Application
 
-*A step-by-step tutorial for building your first web application on the Enonic platform*
+*A step-by-step tutorial for building your first application on the Enonic platform*
 
 image::images/ready-set-code.svg["Ready...Set...Code!", width=100%]
 
